@@ -28,7 +28,7 @@ jobs:
         ports:
           - 6379:6379
       kafka:
-        image: bitnami/kafka:3.7
+        image: bitnami/kafka:latest
         ports:
           - 9092:9092
         options: >-
@@ -42,7 +42,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '25'
           distribution: 'temurin'
           cache: maven
       - name: Build and test
